@@ -1,4 +1,4 @@
-const COOKIE = 'couchell_subscribed=1'
+const COOKIE = 'ktima_subscribed=1'
 const slot = document.getElementById('signup-slot')
 
 function showConfirmation() {
