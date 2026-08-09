@@ -16,6 +16,12 @@
       ]
     },
     {
+      "source": "/:asset(emblem.webp|emblem.svg|favicon-32.png|favicon-512.png|apple-touch-icon.png)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
       "source": "/background.webp",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }

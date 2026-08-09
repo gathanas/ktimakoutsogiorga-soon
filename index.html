@@ -20,7 +20,9 @@
 <meta name="twitter:title" content="Κτήμα Κουτσόγιωργα — Coming Soon">
 <meta name="twitter:description" content="Από τον τόπο των Καρυάτιδων, στις πλαγιές του Πάρνωνα. Εγγραφείτε για να ειδοποιηθείτε όταν λανσάρουμε.">
 <meta name="twitter:image" content="https://ktimakoutsogiorga.gr/og.jpg">
-<link rel="icon" type="image/webp" href="/brand.webp">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>Κτήμα Κουτσόγιωργα — Coming Soon</title>
 <link rel="preload" as="image" href="/background.webp" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
@@ -46,6 +48,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;background:url('/backgr
 .background-overlay{position:fixed;inset:0;background:linear-gradient(135deg,rgba(74,14,14,.85) 0%,rgba(114,47,55,.75) 50%,rgba(74,14,14,.9) 100%);z-index:0}
 .container{position:relative;z-index:1;width:100%;padding:1.5rem;display:flex;align-items:center;justify-content:center;min-height:100vh;animation:fadeIn 1.2s ease-out}
 .card{background:rgba(74,14,14,.45);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(212,175,55,.25);border-radius:12px;padding:3.5rem 3rem;max-width:520px;width:100%;text-align:center}
+.emblem{display:block;height:72px;width:auto;margin:0 auto .9rem}
 .brand{font-family:'Piazzolla',Georgia,serif;font-size:1rem;letter-spacing:.25em;text-transform:uppercase;color:#D4AF37;margin-bottom:.75rem}
 .heading{font-family:'Piazzolla',Georgia,serif;font-size:3rem;font-weight:700;line-height:1.15;margin-bottom:1.25rem;color:#F5F0E1}
 .tagline{font-weight:300;font-size:1.05rem;line-height:1.7;color:rgba(245,240,225,.85);margin-bottom:2rem}
@@ -58,13 +61,14 @@ body::before{content:'';position:fixed;inset:0;z-index:0;background:url('/backgr
 .confirmation{color:#D4AF37;font-size:1rem;margin-top:1rem}
 @keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @media (max-width:768px){.card{padding:2.5rem 2rem}.heading{font-size:2.4rem}}
-@media (max-width:480px){.card{padding:2rem 1.25rem;border-radius:8px}.heading{font-size:2rem}.tagline{font-size:.95rem}.signup{flex-direction:column}.notify-btn{width:100%}}
+@media (max-width:480px){.card{padding:2rem 1.25rem;border-radius:8px}.emblem{height:56px}.heading{font-size:2rem}.tagline{font-size:.95rem}.signup{flex-direction:column}.notify-btn{width:100%}}
 </style>
 </head>
 <body>
 <div class="background-overlay"></div>
 <main class="container">
 <div class="card">
+<img class="emblem" src="/emblem.webp" width="600" height="539" alt="" decoding="async">
 <p class="brand">Κτήμα Κουτσόγιωργα</p>
 <h1 class="heading">Coming Soon</h1>
 <p class="tagline">Από τον τόπο των Καρυάτιδων, στις πλαγιές του Πάρνωνα, κάτι που αξίζει την αναμονή έρχεται σύντομα...</p>
