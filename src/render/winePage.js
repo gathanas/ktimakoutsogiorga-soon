@@ -37,11 +37,10 @@ function nutritionRows(n) {
 }
 
 const STYLES = `
-  /* Brand palette, kept in sync with the :root block in index.html. The last six are
-     derived, not in the source palette: --grey-text and --hairline exist because
-     --muted-grey (1.9:1) and --gold-dim (3.16:1) are dark-surface colours that fail as
-     text and borders on --paper. */
+  /* Brand palette, kept in sync with the :root block in index.html. The last four are
+     derived UI states, not part of the source palette. */
   :root{
+    color-scheme:dark;
     --ink-black:#1D1D1B;
     --emboss-black:#010101;
     --gold-foil:#DFC480;
@@ -53,27 +52,26 @@ const STYLES = `
     --gold-dim:#A38F5B;
     --red-text:#E8524F;
     --surface:#262624;
-    --grey-text:#6C6C6B;
-    --hairline:#E8E8E8;
   }
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  html,body{min-height:100%;background:var(--paper);color:var(--ink-black);font-family:'Piazzolla',Georgia,serif;font-weight:300;line-height:1.6}
+  html,body{min-height:100%;background:var(--ink-black);color:var(--white-ink);font-family:'Piazzolla',Georgia,serif;font-weight:300;line-height:1.6}
   .page{min-height:100vh;padding:24px 16px}
   .container{max-width:560px;margin:0 auto}
-  .heading{font-family:'Piazzolla',Georgia,serif;font-style:italic;font-weight:400;color:var(--wine-red);font-size:1.8rem;margin-bottom:6px}
-  .subtitle{color:var(--grey-text);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px}
-  .section-heading{color:var(--ink-black);text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:600;border-bottom:2px solid var(--gold-dim);padding-bottom:6px;margin-bottom:8px}
-  .table-caption{display:block;color:var(--grey-text);font-size:12px;margin-bottom:8px}
+  .heading{font-family:'Piazzolla',Georgia,serif;font-style:italic;font-weight:400;color:var(--paper);font-size:1.8rem;margin-bottom:6px}
+  .subtitle{color:var(--muted-grey);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px}
+  .section-heading{color:var(--white-ink);text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:600;border-bottom:2px solid var(--gold-foil);padding-bottom:6px;margin-bottom:8px}
+  .table-caption{display:block;color:var(--muted-grey);font-size:12px;margin-bottom:8px}
   .table{width:100%;border-collapse:collapse;margin-bottom:24px}
-  .table td{padding:8px 12px 8px 0;border-bottom:1px solid var(--hairline);color:var(--ink-black);font-size:14px}
+  .table td{padding:8px 12px 8px 0;border-bottom:1px solid rgba(223,196,128,.18);color:var(--white-ink);font-size:14px}
+  .table tr:last-child td{border-bottom:0}
   .table-label{font-weight:500}
   .table-label-indent{font-weight:400;padding-left:24px!important}
   .table-value{text-align:right;font-weight:500}
-  .ingredients{color:var(--ink-black);line-height:1.7;margin-bottom:24px;font-size:14px}
-  .notice{display:flex;align-items:flex-start;gap:12px;background:rgba(205,23,25,.06);border:1px solid var(--hairline);border-radius:8px;padding:14px 18px;margin-bottom:20px}
-  .notice-icon{flex-shrink:0;color:var(--wine-red);display:flex;align-items:center;justify-content:center;line-height:1}
-  .notice-text{color:var(--wine-red);font-weight:500;font-size:14px;line-height:1.5}
-  .link-btn{display:block;width:fit-content;margin:24px auto 0;padding:8px 16px;color:var(--wine-red);font-weight:500;text-decoration:none;border-radius:4px;font-size:14px;transition:background-color .2s}
+  .ingredients{color:var(--white-ink);line-height:1.7;margin-bottom:24px;font-size:14px}
+  .notice{display:flex;align-items:flex-start;gap:12px;background:rgba(205,23,25,.06);border:1px solid rgba(223,196,128,.18);border-radius:8px;padding:14px 18px;margin-bottom:20px}
+  .notice-icon{flex-shrink:0;color:var(--gold-foil);display:flex;align-items:center;justify-content:center;line-height:1}
+  .notice-text{color:var(--white-ink);font-weight:500;font-size:14px;line-height:1.5}
+  .link-btn{display:block;width:fit-content;margin:24px auto 0;padding:8px 16px;color:var(--gold-foil);font-weight:500;text-decoration:none;border-radius:4px;font-size:14px;transition:background-color .2s}
   .link-btn:hover{background:rgba(205,23,25,.06)}
   @media (min-width:900px){.page{padding:32px 24px}.heading{font-size:2.2rem}.subtitle{margin-bottom:32px}}
   /* Variable fonts, wght 100-900. The font-weight range is required: the default instance
@@ -108,6 +106,7 @@ export function renderWinePage(wine) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#010101">
 <link rel="canonical" href="${ORIGIN}/wines/${wineSlug(wine)}.html">
 <title>${escapeHtml(title)}</title>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
