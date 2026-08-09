@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Κτήμα Κουτσόγιωργα — Από τον τόπο των Καρυάτιδων, στις πλαγιές του Πάρνωνα. Εγγραφείτε για να ειδοποιηθείτε όταν λανσάρουμε.">
+<meta name="description" content="Ορεινό Κτήμα Κουτσόγιωργα — Από τον τόπο των Καρυάτιδων, στις πλαγιές του Πάρνωνα. Εγγραφείτε για να ειδοποιηθείτε όταν λανσάρουμε.">
 <link rel="canonical" href="https://ktimakoutsogiorga.gr/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Κτήμα Κουτσόγιωργα">
+<meta property="og:site_name" content="Ορεινό Κτήμα Κουτσόγιωργα">
 <meta property="og:locale" content="el_GR">
 <meta property="og:url" content="https://ktimakoutsogiorga.gr/">
-<meta property="og:title" content="Κτήμα Κουτσόγιωργα — Coming Soon">
+<meta property="og:title" content="Ορεινό Κτήμα Κουτσόγιωργα — Coming Soon">
 <meta property="og:description" content="Από τον τόπο των Καρυάτιδων, στις πλαγιές του Πάρνωνα. Εγγραφείτε για να ειδοποιηθείτε όταν λανσάρουμε.">
 <meta property="og:image" content="https://ktimakoutsogiorga.gr/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -17,18 +17,34 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Ποτήρι κόκκινου κρασιού σε βαρέλι, με θέα στον αμπελώνα στο ηλιοβασίλεμα.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Κτήμα Κουτσόγιωργα — Coming Soon">
+<meta name="twitter:title" content="Ορεινό Κτήμα Κουτσόγιωργα — Coming Soon">
 <meta name="twitter:description" content="Από τον τόπο των Καρυάτιδων, στις πλαγιές του Πάρνωνα. Εγγραφείτε για να ειδοποιηθείτε όταν λανσάρουμε.">
 <meta name="twitter:image" content="https://ktimakoutsogiorga.gr/og.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<title>Κτήμα Κουτσόγιωργα — Coming Soon</title>
+<meta name="theme-color" content="#010101">
+<title>Ορεινό Κτήμα Κουτσόγιωργα — Coming Soon</title>
 <link rel="preload" as="image" href="/background.webp" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preconnect" href="https://formsubmit.co" crossorigin>
 <style>
+/* Brand palette. The last four are derived, not in the source palette — they exist for UI
+   states the brand colours don't cover (hover, disabled rules, red text on a dark ground). */
+:root{
+  --ink-black:#1D1D1B;
+  --emboss-black:#010101;
+  --gold-foil:#DFC480;
+  --wine-red:#CD1719;
+  --white-ink:#CAC5E4;
+  --muted-grey:#BCBCBA;
+  --paper:#FFFFFF;
+  --gold-hover:#EBD49C;
+  --gold-dim:#A38F5B;
+  --red-text:#E8524F;
+  --surface:#262624;
+}
 /* Variable fonts, wght 100-900. The font-weight range is required: the default instance
    is Thin, so omitting it renders every element hairline. Greek unicode-range is derived
    from the files' actual cmap — a wider range than the file covers falls back silently. */
@@ -37,28 +53,28 @@
 @font-face{font-family:'Piazzolla';font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/piazzolla-latin.woff2) format('woff2')}
 @font-face{font-family:'Piazzolla';font-style:italic;font-weight:100 900;font-display:swap;src:url(/fonts/piazzolla-latin-italic.woff2) format('woff2')}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;font-family:'Piazzolla',Georgia,serif;color:#F5F0E1}
-body{display:flex;align-items:center;justify-content:center;background:#4A0E0E url('/background.webp') center/cover no-repeat fixed;position:relative}
+html,body{height:100%;font-family:'Piazzolla',Georgia,serif;color:var(--white-ink)}
+body{display:flex;align-items:center;justify-content:center;background:var(--emboss-black) url('/background.webp') center/cover no-repeat fixed;position:relative}
 /* Safari sizes background-attachment:fixed against the document, not the viewport, so the
    image jumps as the iOS URL bar hides/shows. Swap it for a real viewport-fixed layer. */
 @supports (-webkit-hyphens:none){
 body{background-image:none}
 body::before{content:'';position:fixed;inset:0;z-index:0;background:url('/background.webp') center/cover no-repeat}
 }
-.background-overlay{position:fixed;inset:0;background:linear-gradient(135deg,rgba(74,14,14,.85) 0%,rgba(114,47,55,.75) 50%,rgba(74,14,14,.9) 100%);z-index:0}
+.background-overlay{position:fixed;inset:0;background:linear-gradient(135deg,rgba(1,1,1,.85) 0%,rgba(29,29,27,.75) 50%,rgba(1,1,1,.9) 100%);z-index:0}
 .container{position:relative;z-index:1;width:100%;padding:1.5rem;display:flex;align-items:center;justify-content:center;min-height:100vh;animation:fadeIn 1.2s ease-out}
-.card{background:rgba(74,14,14,.45);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(212,175,55,.25);border-radius:12px;padding:3.5rem 3rem;max-width:520px;width:100%;text-align:center}
+.card{background:rgba(38,38,36,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(223,196,128,.25);border-radius:12px;padding:3.5rem 3rem;max-width:520px;width:100%;text-align:center}
 .emblem{display:block;height:72px;width:auto;margin:0 auto .9rem}
-.brand{font-family:'Piazzolla',Georgia,serif;font-size:1rem;letter-spacing:.25em;text-transform:uppercase;color:#D4AF37;margin-bottom:.75rem}
-.heading{font-family:'Piazzolla',Georgia,serif;font-size:3rem;font-weight:700;line-height:1.15;margin-bottom:1.25rem;color:#F5F0E1}
-.tagline{font-weight:300;font-size:1.05rem;line-height:1.7;color:rgba(245,240,225,.85);margin-bottom:2rem}
+.brand{font-family:'Piazzolla',Georgia,serif;font-size:1rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold-foil);margin-bottom:.75rem}
+.heading{font-family:'Piazzolla',Georgia,serif;font-size:3rem;font-weight:700;line-height:1.15;margin-bottom:1.25rem;color:var(--white-ink)}
+.tagline{font-weight:300;font-size:1.05rem;line-height:1.7;color:rgba(202,197,228,.85);margin-bottom:2rem}
 .signup{display:flex;gap:.5rem}
-.email-input{flex:1;padding:.85rem 1rem;border:1px solid rgba(212,175,55,.35);border-radius:6px;background:rgba(245,240,225,.1);color:#F5F0E1;font-family:'Piazzolla',Georgia,serif;font-size:.95rem;outline:none;transition:border-color .2s}
-.email-input::placeholder{color:rgba(245,240,225,.5)}
-.email-input:focus{border-color:#D4AF37}
-.notify-btn{padding:.85rem 1.5rem;border:none;border-radius:6px;background:#D4AF37;color:#4A0E0E;font-family:'Piazzolla',Georgia,serif;font-size:.95rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .2s}
-.notify-btn:hover{background:#c19b2e}
-.confirmation{color:#D4AF37;font-size:1rem;margin-top:1rem}
+.email-input{flex:1;padding:.85rem 1rem;border:1px solid rgba(223,196,128,.35);border-radius:6px;background:rgba(202,197,228,.1);color:var(--white-ink);font-family:'Piazzolla',Georgia,serif;font-size:.95rem;outline:none;transition:border-color .2s}
+.email-input::placeholder{color:rgba(188,188,186,.6)}
+.email-input:focus{border-color:var(--gold-foil)}
+.notify-btn{padding:.85rem 1.5rem;border:none;border-radius:6px;background:var(--gold-foil);color:var(--ink-black);font-family:'Piazzolla',Georgia,serif;font-size:.95rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .2s}
+.notify-btn:hover{background:var(--gold-hover)}
+.confirmation{color:var(--gold-foil);font-size:1rem;margin-top:1rem}
 @keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @media (max-width:768px){.card{padding:2.5rem 2rem}.heading{font-size:2.4rem}}
 @media (max-width:480px){.card{padding:2rem 1.25rem;border-radius:8px}.emblem{height:56px}.heading{font-size:2rem}.tagline{font-size:.95rem}.signup{flex-direction:column}.notify-btn{width:100%}}
@@ -68,8 +84,8 @@ body::before{content:'';position:fixed;inset:0;z-index:0;background:url('/backgr
 <div class="background-overlay"></div>
 <main class="container">
 <div class="card">
-<img class="emblem" src="/emblem.webp" width="600" height="539" alt="" decoding="async">
-<p class="brand">Κτήμα Κουτσόγιωργα</p>
+<img class="emblem" src="/emblem-card.webp" width="600" height="541" alt="" decoding="async">
+<p class="brand">Ορεινό Κτήμα Κουτσόγιωργα</p>
 <h1 class="heading">Coming Soon</h1>
 <p class="tagline">Από τον τόπο των Καρυάτιδων, στις πλαγιές του Πάρνωνα, κάτι που αξίζει την αναμονή έρχεται σύντομα...</p>
 <div id="signup-slot">
