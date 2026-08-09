@@ -6,15 +6,15 @@ Primary content language is Greek (el). The only interactive element on the land
 
 ## Wines
 
-- [Mandolino (Μαντολίνο)](https://www.ktimakoutsogiorga.gr/wines/mandolino.html): Red, Cabernet Sauvignon 60% / Merlot 40%, 13.5% ABV, aged in French oak.
-- [Livia's Rosé](https://www.ktimakoutsogiorga.gr/wines/livias-rose.html): Rosé, Cabernet Sauvignon 55% / Merlot 45%, 12.5% ABV.
-- [Oinous (Οινούς)](https://www.ktimakoutsogiorga.gr/wines/oenous.html): White, Assyrtiko, 13% ABV.
-- [Kores (Κόρες)](https://www.ktimakoutsogiorga.gr/wines/kores.html): White, Assyrtiko & Kydonitsa, 12.5% ABV.
-- [Kato Rachi (Κάτω Ράχη)](https://www.ktimakoutsogiorga.gr/wines/kato-rachi.html): White, Kydonitsa, 12% ABV.
+- [Mandolino (Μαντολίνο)](https://ktimakoutsogiorga.gr/wines/mandolino.html): Red, Cabernet Sauvignon 60% / Merlot 40%, 13.5% ABV, aged in French oak.
+- [Livia's Rosé](https://ktimakoutsogiorga.gr/wines/livias-rose.html): Rosé, Cabernet Sauvignon 55% / Merlot 45%, 12.5% ABV.
+- [Oinous (Οινούς)](https://ktimakoutsogiorga.gr/wines/oenous.html): White, Assyrtiko, 13% ABV.
+- [Kores (Κόρες)](https://ktimakoutsogiorga.gr/wines/kores.html): White, Assyrtiko & Kydonitsa, 12.5% ABV.
+- [Kato Rachi (Κάτω Ράχη)](https://ktimakoutsogiorga.gr/wines/kato-rachi.html): White, Kydonitsa, 12% ABV.
 
 ## Optional
 
-- [Landing page](https://www.ktimakoutsogiorga.gr/): Pre-launch page with the email signup form.
+- [Landing page](https://ktimakoutsogiorga.gr/): Pre-launch page with the email signup form.
 - [Contact](mailto:couchellwinery@gmail.com): Direct email to the winery.
 
 ## Notes

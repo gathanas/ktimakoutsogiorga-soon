@@ -1,3 +1,10 @@
+import { wineSlug } from '../utils/slug.js'
+
+// Canonical URLs keep the .html extension and the bare host: the Papaki package
+// serves static files straight from nginx, so there is no rewrite available to
+// make an extensionless path resolve, and www is only an alias of this host.
+const ORIGIN = 'https://ktimakoutsogiorga.gr'
+
 function escapeHtml(s) {
   return String(s)
     .replace(/&/g, '&amp;')
@@ -82,6 +89,7 @@ export function renderWinePage(wine) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="${ORIGIN}/wines/${wineSlug(wine)}.html">
 <title>${escapeHtml(title)}</title>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
