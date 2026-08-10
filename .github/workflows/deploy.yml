@@ -1,0 +1,44 @@
+name: Deploy to Papaki
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: papaki-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      # Papaki's FTP server does not support FTPS: it answers both AUTH TLS and
+      # AUTH SSL with "500 AUTH not understood", and no SSH/SFTP is reachable on
+      # this plan. Plain FTP is therefore the only available transport, so the
+      # credentials cross the network in the clear. Keep this FTP user scoped to
+      # this site only, and switch protocol to ftps the moment Papaki supports it.
+      - name: Sync dist/ to www/
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.PAPAKI_FTP_SERVER }}
+          username: ${{ secrets.PAPAKI_FTP_USER }}
+          password: ${{ secrets.PAPAKI_FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: ./dist/
+          server-dir: ./www/
+          # Parked beside www/ rather than inside it, so the file inventory is
+          # not fetchable at https://ktimakoutsogiorga.gr/.ftp-deploy-sync-state.json
+          state-name: ../.ftp-deploy-sync-state.json
