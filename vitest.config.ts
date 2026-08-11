@@ -4,6 +4,7 @@ import { defineConfig } from 'vitest/config'
 // and the dev-server middleware it registers, out of the test run entirely.
 export default defineConfig({
   test: {
-    include: ['src/**/*.test.ts'],
+    // index.test.ts sits at the root beside its subject, index.html.
+    include: ['src/**/*.test.ts', '*.test.ts'],
   },
 })
