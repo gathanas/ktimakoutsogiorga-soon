@@ -23,6 +23,8 @@ jobs:
 
       - run: npm ci
 
+      - run: npm test
+
       - run: npm run build
 
       # Papaki's FTP server does not support FTPS: it answers both AUTH TLS and
