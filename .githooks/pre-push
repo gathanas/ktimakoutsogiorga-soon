@@ -1,0 +1,20 @@
+#!/bin/sh
+# Mirrors the gates in .github/workflows/deploy.yml, so a push that would turn the Papaki
+# deploy red fails here instead. Runs in about a second.
+#
+# Note this checks the working tree, not the commits being pushed: uncommitted breakage
+# blocks the push too. To push anyway, deliberately: git push --no-verify
+set -e
+
+if [ ! -d node_modules ]; then
+  echo "pre-push: node_modules is missing, run npm ci first" >&2
+  exit 1
+fi
+
+printf '\npre-push: tsc --noEmit\n'
+npm run --silent typecheck
+
+printf '\npre-push: vitest\n'
+npm run --silent test
+
+printf '\npre-push: ok\n\n'
