@@ -1,4 +1,6 @@
-export const wines = [
+import type { Wine } from '../types.js'
+
+export const wines: Wine[] = [
   {
     name: 'Mandolino',
     nameEl: 'Μαντολίνο',

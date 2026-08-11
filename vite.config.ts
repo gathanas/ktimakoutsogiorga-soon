@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -8,7 +8,7 @@ import { renderWinePage } from './src/render/winePage.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-function winePages() {
+function winePages(): Plugin {
   return {
     name: 'wine-pages',
     configureServer(server) {

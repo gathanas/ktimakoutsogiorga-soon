@@ -1,4 +1,6 @@
-export function toSlug(name) {
+import type { Wine } from '../types.js'
+
+export function toSlug(name: string): string {
   return name
     .toLowerCase()
     .normalize('NFD')
@@ -8,6 +10,6 @@ export function toSlug(name) {
     .replace(/^-|-$/g, '')
 }
 
-export function wineSlug(wine) {
+export function wineSlug(wine: Wine): string {
   return wine.slug ?? toSlug(wine.name)
 }

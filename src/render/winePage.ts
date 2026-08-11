@@ -1,3 +1,4 @@
+import type { Nutrition, Wine } from '../types.js'
 import { wineSlug } from '../utils/slug.js'
 
 // Canonical URLs keep the .html extension and the bare host: the Papaki package
@@ -5,7 +6,7 @@ import { wineSlug } from '../utils/slug.js'
 // make an extensionless path resolve, and www is only an alias of this host.
 const ORIGIN = 'https://ktimakoutsogiorga.gr'
 
-function escapeHtml(s) {
+function escapeHtml(s: string): string {
   return String(s)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -14,12 +15,12 @@ function escapeHtml(s) {
     .replace(/'/g, '&#39;')
 }
 
-function fmt(n) {
+function fmt(n: number): string {
   return n.toFixed(2)
 }
 
-function nutritionRows(n) {
-  const rows = [
+function nutritionRows(n: Nutrition): string {
+  const rows: Array<{ label: string; value: string; indent?: boolean }> = [
     { label: 'Ενέργεια', value: `${n.energy.kj} kJ / ${n.energy.kcal} kcal` },
     { label: 'Λιπαρά', value: `${fmt(n.fat)} g` },
     { label: 'εκ των οποίων κορεσμένα', value: `${fmt(n.saturatedFat)} g`, indent: true },
@@ -85,7 +86,7 @@ const STYLES = `
 
 const ALERT_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`
 
-export function renderWinePage(wine) {
+export function renderWinePage(wine: Wine): string {
   const name = wine.nameEl ?? wine.name
   const ingredients = wine.ingredientsEl ?? wine.ingredients
   const title = `${name} — Ορεινό Κτήμα Κουτσόγιωργα`
