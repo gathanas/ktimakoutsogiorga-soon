@@ -7,8 +7,12 @@ exports[`renderWinePage > published pages > renders kato-rachi unchanged 1`] = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
+<meta name="description" content="Μια γνήσια Κυδωνίτσα με κυδώνι, πυρηνόκαρπα και ξεχωριστό αρωματικό χαρακτήρα μοναδικό στην περιοχή.">
 <link rel="canonical" href="https://ktimakoutsogiorga.gr/i/kato-rachi/">
 <title>Κάτω Ράχη — Ορεινό Κτήμα Κουτσόγιωργα</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek-italic.woff2" crossorigin>
@@ -64,10 +68,10 @@ exports[`renderWinePage > published pages > renders kato-rachi unchanged 1`] = `
 <div class="container">
 <h1 class="heading">Κάτω Ράχη</h1>
 <p class="subtitle">12% vol. · 750ml · Κυδωνίτσα</p>
-<h6 class="section-heading">Διατροφική Δήλωση</h6>
+<h2 class="section-heading">Διατροφική Δήλωση</h2>
         <span class="table-caption">Ανά 100 ml</span>
         <table class="table"><tbody><tr><td class="table-label">Ενέργεια</td><td class="table-value">280 kJ / 67 kcal</td></tr><tr><td class="table-label">Λιπαρά</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label-indent">εκ των οποίων κορεσμένα</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Υδατάνθρακες</td><td class="table-value">1.10 g</td></tr><tr><td class="table-label-indent">εκ των οποίων σάκχαρα</td><td class="table-value">0.50 g</td></tr><tr><td class="table-label">Πρωτεΐνες</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Αλάτι</td><td class="table-value">0.10 g</td></tr></tbody></table>
-<h6 class="section-heading">Συστατικά</h6>
+<h2 class="section-heading">Συστατικά</h2>
         <p class="ingredients">Κυδωνίτσα (100%), περιέχει θειώδη</p>
 <div class="notice">
 <span class="notice-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
@@ -88,8 +92,12 @@ exports[`renderWinePage > published pages > renders kores unchanged 1`] = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
+<meta name="description" content="Ένα εκλεπτυσμένο λευκό blend που συνδυάζει τη δομή του Ασύρτικου με την αρωματική πολυπλοκότητα της Κυδωνίτσας.">
 <link rel="canonical" href="https://ktimakoutsogiorga.gr/i/kores/">
 <title>Κόρες — Ορεινό Κτήμα Κουτσόγιωργα</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek-italic.woff2" crossorigin>
@@ -145,10 +153,10 @@ exports[`renderWinePage > published pages > renders kores unchanged 1`] = `
 <div class="container">
 <h1 class="heading">Κόρες</h1>
 <p class="subtitle">12.5% vol. · 750ml · Ασύρτικο &amp; Κυδωνίτσα</p>
-<h6 class="section-heading">Διατροφική Δήλωση</h6>
+<h2 class="section-heading">Διατροφική Δήλωση</h2>
         <span class="table-caption">Ανά 100 ml</span>
         <table class="table"><tbody><tr><td class="table-label">Ενέργεια</td><td class="table-value">293 kJ / 70 kcal</td></tr><tr><td class="table-label">Λιπαρά</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label-indent">εκ των οποίων κορεσμένα</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Υδατάνθρακες</td><td class="table-value">1.00 g</td></tr><tr><td class="table-label-indent">εκ των οποίων σάκχαρα</td><td class="table-value">0.40 g</td></tr><tr><td class="table-label">Πρωτεΐνες</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Αλάτι</td><td class="table-value">0.10 g</td></tr></tbody></table>
-<h6 class="section-heading">Συστατικά</h6>
+<h2 class="section-heading">Συστατικά</h2>
         <p class="ingredients">Ασύρτικο (60%), Κυδωνίτσα (40%), περιέχει θειώδη</p>
 <div class="notice">
 <span class="notice-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
@@ -169,8 +177,12 @@ exports[`renderWinePage > published pages > renders livias-rose unchanged 1`] = 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
+<meta name="description" content="Ένα απαλό ροζέ με φρέσκα κόκκινα μούρα, λουλουδάτες νότες και δροσερή επίγευση.">
 <link rel="canonical" href="https://ktimakoutsogiorga.gr/i/livias-rose/">
 <title>Livia&#39;s Rosé — Ορεινό Κτήμα Κουτσόγιωργα</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek-italic.woff2" crossorigin>
@@ -226,10 +238,10 @@ exports[`renderWinePage > published pages > renders livias-rose unchanged 1`] = 
 <div class="container">
 <h1 class="heading">Livia&#39;s Rosé</h1>
 <p class="subtitle">12.5% vol. · 750ml · Cabernet Sauvignon &amp; Merlot</p>
-<h6 class="section-heading">Διατροφική Δήλωση</h6>
+<h2 class="section-heading">Διατροφική Δήλωση</h2>
         <span class="table-caption">Ανά 100 ml</span>
         <table class="table"><tbody><tr><td class="table-label">Ενέργεια</td><td class="table-value">293 kJ / 70 kcal</td></tr><tr><td class="table-label">Λιπαρά</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label-indent">εκ των οποίων κορεσμένα</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Υδατάνθρακες</td><td class="table-value">1.20 g</td></tr><tr><td class="table-label-indent">εκ των οποίων σάκχαρα</td><td class="table-value">0.50 g</td></tr><tr><td class="table-label">Πρωτεΐνες</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Αλάτι</td><td class="table-value">0.10 g</td></tr></tbody></table>
-<h6 class="section-heading">Συστατικά</h6>
+<h2 class="section-heading">Συστατικά</h2>
         <p class="ingredients">Cabernet Sauvignon (55%), Merlot (45%), περιέχει θειώδη</p>
 <div class="notice">
 <span class="notice-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
@@ -250,8 +262,12 @@ exports[`renderWinePage > published pages > renders mandolino unchanged 1`] = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
+<meta name="description" content="Ένα δυναμικό ερυθρό κρασί με σκούρα φρούτα, μπαχαρικά και βελούδινη επίγευση. Ωρίμανση σε γαλλική δρυ.">
 <link rel="canonical" href="https://ktimakoutsogiorga.gr/i/mandolino/">
 <title>Μαντολίνο — Ορεινό Κτήμα Κουτσόγιωργα</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek-italic.woff2" crossorigin>
@@ -307,10 +323,10 @@ exports[`renderWinePage > published pages > renders mandolino unchanged 1`] = `
 <div class="container">
 <h1 class="heading">Μαντολίνο</h1>
 <p class="subtitle">13.5% vol. · 750ml · Cabernet Sauvignon &amp; Merlot</p>
-<h6 class="section-heading">Διατροφική Δήλωση</h6>
+<h2 class="section-heading">Διατροφική Δήλωση</h2>
         <span class="table-caption">Ανά 100 ml</span>
         <table class="table"><tbody><tr><td class="table-label">Ενέργεια</td><td class="table-value">314 kJ / 75 kcal</td></tr><tr><td class="table-label">Λιπαρά</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label-indent">εκ των οποίων κορεσμένα</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Υδατάνθρακες</td><td class="table-value">0.90 g</td></tr><tr><td class="table-label-indent">εκ των οποίων σάκχαρα</td><td class="table-value">0.20 g</td></tr><tr><td class="table-label">Πρωτεΐνες</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Αλάτι</td><td class="table-value">0.10 g</td></tr></tbody></table>
-<h6 class="section-heading">Συστατικά</h6>
+<h2 class="section-heading">Συστατικά</h2>
         <p class="ingredients">Cabernet Sauvignon (60%), Merlot (40%), περιέχει θειώδη</p>
 <div class="notice">
 <span class="notice-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
@@ -331,8 +347,12 @@ exports[`renderWinePage > published pages > renders oenous unchanged 1`] = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
+<meta name="description" content="Ένα ζωηρό Ασύρτικο με εσπεριδοειδή, μεταλλικότητα και μακριά, κομψή επίγευση.">
 <link rel="canonical" href="https://ktimakoutsogiorga.gr/i/oenous/">
 <title>Οινούς — Ορεινό Κτήμα Κουτσόγιωργα</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek-italic.woff2" crossorigin>
@@ -388,10 +408,10 @@ exports[`renderWinePage > published pages > renders oenous unchanged 1`] = `
 <div class="container">
 <h1 class="heading">Οινούς</h1>
 <p class="subtitle">13% vol. · 750ml · Ασύρτικο</p>
-<h6 class="section-heading">Διατροφική Δήλωση</h6>
+<h2 class="section-heading">Διατροφική Δήλωση</h2>
         <span class="table-caption">Ανά 100 ml</span>
         <table class="table"><tbody><tr><td class="table-label">Ενέργεια</td><td class="table-value">305 kJ / 73 kcal</td></tr><tr><td class="table-label">Λιπαρά</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label-indent">εκ των οποίων κορεσμένα</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Υδατάνθρακες</td><td class="table-value">0.80 g</td></tr><tr><td class="table-label-indent">εκ των οποίων σάκχαρα</td><td class="table-value">0.30 g</td></tr><tr><td class="table-label">Πρωτεΐνες</td><td class="table-value">0.00 g</td></tr><tr><td class="table-label">Αλάτι</td><td class="table-value">0.10 g</td></tr></tbody></table>
-<h6 class="section-heading">Συστατικά</h6>
+<h2 class="section-heading">Συστατικά</h2>
         <p class="ingredients">Ασύρτικο (100%), περιέχει θειώδη</p>
 <div class="notice">
 <span class="notice-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>

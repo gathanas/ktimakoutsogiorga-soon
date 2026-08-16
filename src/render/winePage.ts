@@ -97,15 +97,16 @@ export function renderWinePage(wine: Wine): string {
   const name = wine.nameEl ?? wine.name
   const ingredients = wine.ingredientsEl ?? wine.ingredients
   const title = `${name} — Ορεινό Κτήμα Κουτσόγιωργα`
+  const description = wine.descriptionEl ?? `${name} — ${wine.grape}, ${wine.alcohol} vol.`
 
   const nutritionSection = wine.nutrition
-    ? `<h6 class="section-heading">Διατροφική Δήλωση</h6>
+    ? `<h2 class="section-heading">Διατροφική Δήλωση</h2>
         <span class="table-caption">Ανά 100 ml</span>
         <table class="table"><tbody>${nutritionRows(wine.nutrition)}</tbody></table>`
     : ''
 
   const ingredientsSection = ingredients
-    ? `<h6 class="section-heading">Συστατικά</h6>
+    ? `<h2 class="section-heading">Συστατικά</h2>
         <p class="ingredients">${escapeHtml(ingredients)}</p>`
     : ''
 
@@ -115,8 +116,12 @@ export function renderWinePage(wine: Wine): string {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
+<meta name="description" content="${escapeHtml(description)}">
 <link rel="canonical" href="${ORIGIN}/i/${wineSlug(wine)}/">
 <title>${escapeHtml(title)}</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek-italic.woff2" crossorigin>
