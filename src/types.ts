@@ -12,7 +12,7 @@ export interface Nutrition {
 
 export interface Wine {
   // Only set where the derived slug would be wrong: toSlug('Oinous') gives 'oinous',
-  // but the published URL is /wines/oenous.html.
+  // but the published URL is /i/oenous/.
   slug?: string
   name: string
   nameEl?: string

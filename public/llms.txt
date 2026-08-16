@@ -2,15 +2,15 @@
 
 > Family winery in Karyes, on the slopes of Mount Parnon, Greece. The public site is currently a pre-launch "coming soon" page that collects email signups for launch notification.
 
-Primary content language is Greek (el). The only interactive element on the landing page is an email signup form. There is no catalogue, pricing, or online ordering yet. Individual wine pages exist and carry EU-compliant ingredient and nutrition data, but are not yet linked from the landing page.
+Primary content language is Greek (el). The only interactive element on the landing page is an email signup form. There is no catalogue, pricing, or online ordering yet. Individual wine pages exist and carry EU-compliant ingredient and nutrition data, but are not linked from the landing page: they are reached by scanning the QR code on the bottle, which is why their URLs are short. The older /wines/<slug>.html URLs still resolve and serve the same page.
 
 ## Wines
 
-- [Mandolino (Μαντολίνο)](https://ktimakoutsogiorga.gr/wines/mandolino.html): Red, Cabernet Sauvignon 60% / Merlot 40%, 13.5% ABV, aged in French oak.
-- [Livia's Rosé](https://ktimakoutsogiorga.gr/wines/livias-rose.html): Rosé, Cabernet Sauvignon 55% / Merlot 45%, 12.5% ABV.
-- [Oinous (Οινούς)](https://ktimakoutsogiorga.gr/wines/oenous.html): White, Assyrtiko, 13% ABV.
-- [Kores (Κόρες)](https://ktimakoutsogiorga.gr/wines/kores.html): White, Assyrtiko & Kydonitsa, 12.5% ABV.
-- [Kato Rachi (Κάτω Ράχη)](https://ktimakoutsogiorga.gr/wines/kato-rachi.html): White, Kydonitsa, 12% ABV.
+- [Mandolino (Μαντολίνο)](https://ktimakoutsogiorga.gr/i/mandolino/): Red, Cabernet Sauvignon 60% / Merlot 40%, 13.5% ABV, aged in French oak.
+- [Livia's Rosé](https://ktimakoutsogiorga.gr/i/livias-rose/): Rosé, Cabernet Sauvignon 55% / Merlot 45%, 12.5% ABV.
+- [Oinous (Οινούς)](https://ktimakoutsogiorga.gr/i/oenous/): White, Assyrtiko, 13% ABV.
+- [Kores (Κόρες)](https://ktimakoutsogiorga.gr/i/kores/): White, Assyrtiko & Kydonitsa, 12.5% ABV.
+- [Kato Rachi (Κάτω Ράχη)](https://ktimakoutsogiorga.gr/i/kato-rachi/): White, Kydonitsa, 12% ABV.
 
 ## Optional
 

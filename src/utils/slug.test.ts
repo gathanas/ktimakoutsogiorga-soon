@@ -37,8 +37,8 @@ describe('toSlug', () => {
 
   it('returns an empty string when there are no latin alphanumerics', () => {
     // Documented rather than discovered: a wine whose `name` is Greek would slug to '',
-    // producing dist/wines/.html and a canonical URL of /wines/.html. The data-integrity
-    // suite in src/data/wines.test.ts is what actually guards against this shipping.
+    // producing dist/i//index.html and a canonical URL of /i//. The data-integrity suite
+    // in src/data/wines.test.ts is what actually guards against this shipping.
     expect(toSlug('Οινούς')).toBe('')
     expect(toSlug('Κάτω Ράχη')).toBe('')
     expect(toSlug('')).toBe('')

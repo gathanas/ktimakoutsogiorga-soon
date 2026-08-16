@@ -47,7 +47,7 @@ function request(url: string | undefined) {
 
 describe('winePages dev middleware', () => {
   it('serves a wine page as utf-8 html', () => {
-    const { res, next } = request('/wines/oenous')
+    const { res, next } = request('/i/oenous/')
 
     expect(next).not.toHaveBeenCalled()
     expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'text/html; charset=utf-8')
@@ -55,34 +55,48 @@ describe('winePages dev middleware', () => {
     expect(res.end.mock.calls[0]?.[0]).toContain('<title>Οινούς')
   })
 
-  it('serves the page with a trailing slash', () => {
-    const { res, next } = request('/wines/oenous/')
-    expect(next).not.toHaveBeenCalled()
-    expect(res.end).toHaveBeenCalledTimes(1)
-  })
+  // The printed URL is /i/<slug>/; the rest are the shapes that were published before the
+  // labels existed, or that a hand-typed guess lands on. Dev answers all of them so a QR
+  // pointed at `npm run dev-host` exercises the same path the bottle will.
+  it.each(['/i/oenous/', '/i/oenous', '/wines/oenous', '/wines/oenous/', '/wines/oenous.html'])(
+    'serves %s',
+    (url) => {
+      const { res, next } = request(url)
+      expect(next).not.toHaveBeenCalled()
+      expect(res.end).toHaveBeenCalledTimes(1)
+    },
+  )
 
   it('serves the page with a query string', () => {
-    const { res, next } = request('/wines/oenous?utm_source=qr')
+    const { res, next } = request('/i/oenous/?utm_source=qr')
     expect(next).not.toHaveBeenCalled()
     expect(res.end).toHaveBeenCalledTimes(1)
   })
 
   it('serves every published wine', () => {
     for (const wine of wines) {
-      const { res, next } = request(`/wines/${wineSlug(wine)}`)
+      const { res, next } = request(`/i/${wineSlug(wine)}/`)
       expect(next, wineSlug(wine)).not.toHaveBeenCalled()
       expect(res.end.mock.calls[0]?.[0]).toBe(renderWinePage(wine))
     }
   })
 
-  it.each(['/wines/nope', '/wines/', '/wines', '/about', '/', '/wines/oenous/extra'])(
-    'falls through for %s',
-    (url) => {
-      const { res, next } = request(url)
-      expect(next).toHaveBeenCalledTimes(1)
-      expect(res.end).not.toHaveBeenCalled()
-    },
-  )
+  it.each([
+    '/i/nope',
+    '/i/',
+    '/i',
+    '/i/oenous/extra',
+    '/wines/nope',
+    '/wines/',
+    '/wines',
+    '/about',
+    '/',
+    '/wines/oenous/extra',
+  ])('falls through for %s', (url) => {
+    const { res, next } = request(url)
+    expect(next).toHaveBeenCalledTimes(1)
+    expect(res.end).not.toHaveBeenCalled()
+  })
 
   it('falls through when the request has no url', () => {
     const { res, next } = request(undefined)
@@ -106,9 +120,27 @@ describe('winePages build output', () => {
     hook<() => void>(winePages(outDir).closeBundle)()
   }
 
-  it('writes exactly one page per wine, named by slug', () => {
+  it('writes the printed url as a directory with an index, one per wine', () => {
+    // /i/<slug>/ has to be a real directory: nginx on Papaki has no rewrite that could
+    // resolve an extensionless path to a file.
     build()
-    expect(readdirSync(outDir).sort()).toEqual([
+    expect(readdirSync(resolve(outDir, 'i')).sort()).toEqual([
+      'kato-rachi',
+      'kores',
+      'livias-rose',
+      'mandolino',
+      'oenous',
+    ])
+    for (const wine of wines) {
+      expect(readdirSync(resolve(outDir, 'i', wineSlug(wine)))).toEqual(['index.html'])
+    }
+  })
+
+  it('keeps writing the legacy .html page per wine', () => {
+    // The FTP deploy prunes whatever leaves dist/, and there is no rewrite to redirect
+    // with, so dropping these would 404 every URL published before the labels existed.
+    build()
+    expect(readdirSync(resolve(outDir, 'wines')).sort()).toEqual([
       'kato-rachi.html',
       'kores.html',
       'livias-rose.html',
@@ -117,17 +149,19 @@ describe('winePages build output', () => {
     ])
   })
 
-  it('writes the rendered page for each wine', () => {
+  it('writes the same rendered page to both urls', () => {
     build()
     for (const wine of wines) {
-      const written = readFileSync(resolve(outDir, `${wineSlug(wine)}.html`), 'utf8')
-      expect(written).toBe(renderWinePage(wine))
+      const html = renderWinePage(wine)
+      expect(readFileSync(resolve(outDir, 'i', wineSlug(wine), 'index.html'), 'utf8')).toBe(html)
+      expect(readFileSync(resolve(outDir, 'wines', `${wineSlug(wine)}.html`), 'utf8')).toBe(html)
     }
   })
 
   it('creates the output directory when it does not exist yet', () => {
-    const nested = join(outDir, 'dist', 'wines')
+    const nested = join(outDir, 'dist')
     hook<() => void>(winePages(nested).closeBundle)()
-    expect(readdirSync(nested)).toHaveLength(wines.length)
+    expect(readdirSync(nested).sort()).toEqual(['i', 'wines'])
+    expect(readdirSync(join(nested, 'wines'))).toHaveLength(wines.length)
   })
 })

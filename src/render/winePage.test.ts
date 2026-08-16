@@ -144,11 +144,18 @@ describe('renderWinePage', () => {
       expect(renderWinePage(minimal)).toContain('<a class="link-btn" href="/">')
     })
 
-    it('points canonical at the absolute .html url for the slug', () => {
+    it('points canonical at the absolute /i/ url for the slug', () => {
       // Absolute, unlike every other link here: a canonical is meaningless relative.
       expect(renderWinePage({ ...minimal, slug: 'oenous' })).toContain(
-        '<link rel="canonical" href="https://ktimakoutsogiorga.gr/wines/oenous.html">',
+        '<link rel="canonical" href="https://ktimakoutsogiorga.gr/i/oenous/">',
       )
+    })
+
+    it('keeps the trailing slash, which stops nginx bouncing the scan through http', () => {
+      // /i/<slug>/ is a directory on disk. Without the slash nginx answers with a 301 to
+      // an http:// Location, so a scanned bottle would go https -> http -> https.
+      const canonical = /rel="canonical" href="([^"]+)"/.exec(renderWinePage(minimal))?.[1]
+      expect(canonical?.endsWith('/')).toBe(true)
     })
 
     it('names the file the build actually writes, for every wine', () => {
@@ -156,9 +163,16 @@ describe('renderWinePage', () => {
       // sides key off wineSlug, and this is what catches them drifting apart.
       for (const wine of wines) {
         const canonical = /rel="canonical" href="([^"]+)"/.exec(renderWinePage(wine))?.[1]
-        expect(canonical).toBe(
-          `https://ktimakoutsogiorga.gr/wines/${wineSlug(wine)}.html`,
-        )
+        expect(canonical).toBe(`https://ktimakoutsogiorga.gr/i/${wineSlug(wine)}/`)
+      }
+    })
+
+    it('stays inside the 44-byte budget that keeps the QR at 37x37', () => {
+      // A centre logo forces error correction H, where version 5 holds exactly 44 bytes.
+      // A 45th byte pushes the printed code to 41x41 and shrinks every module with it.
+      for (const wine of wines) {
+        const canonical = /rel="canonical" href="([^"]+)"/.exec(renderWinePage(wine))?.[1] ?? ''
+        expect(Buffer.byteLength(canonical, 'utf8'), canonical).toBeLessThanOrEqual(44)
       }
     })
 

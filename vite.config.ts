@@ -6,7 +6,7 @@ import { winePages } from './src/plugins/winePages.js'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
-  plugins: [winePages(resolve(__dirname, 'dist/wines'))],
+  plugins: [winePages(resolve(__dirname, 'dist'))],
   build: {
     modulePreload: { polyfill: false },
   },

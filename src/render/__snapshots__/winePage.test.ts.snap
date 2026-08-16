@@ -7,7 +7,7 @@ exports[`renderWinePage > published pages > renders kato-rachi unchanged 1`] = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
-<link rel="canonical" href="https://ktimakoutsogiorga.gr/wines/kato-rachi.html">
+<link rel="canonical" href="https://ktimakoutsogiorga.gr/i/kato-rachi/">
 <title>Κάτω Ράχη — Ορεινό Κτήμα Κουτσόγιωργα</title>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
@@ -88,7 +88,7 @@ exports[`renderWinePage > published pages > renders kores unchanged 1`] = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
-<link rel="canonical" href="https://ktimakoutsogiorga.gr/wines/kores.html">
+<link rel="canonical" href="https://ktimakoutsogiorga.gr/i/kores/">
 <title>Κόρες — Ορεινό Κτήμα Κουτσόγιωργα</title>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
@@ -169,7 +169,7 @@ exports[`renderWinePage > published pages > renders livias-rose unchanged 1`] = 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
-<link rel="canonical" href="https://ktimakoutsogiorga.gr/wines/livias-rose.html">
+<link rel="canonical" href="https://ktimakoutsogiorga.gr/i/livias-rose/">
 <title>Livia&#39;s Rosé — Ορεινό Κτήμα Κουτσόγιωργα</title>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
@@ -250,7 +250,7 @@ exports[`renderWinePage > published pages > renders mandolino unchanged 1`] = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
-<link rel="canonical" href="https://ktimakoutsogiorga.gr/wines/mandolino.html">
+<link rel="canonical" href="https://ktimakoutsogiorga.gr/i/mandolino/">
 <title>Μαντολίνο — Ορεινό Κτήμα Κουτσόγιωργα</title>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
@@ -331,7 +331,7 @@ exports[`renderWinePage > published pages > renders oenous unchanged 1`] = `
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
-<link rel="canonical" href="https://ktimakoutsogiorga.gr/wines/oenous.html">
+<link rel="canonical" href="https://ktimakoutsogiorga.gr/i/oenous/">
 <title>Οινούς — Ορεινό Κτήμα Κουτσόγιωργα</title>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>

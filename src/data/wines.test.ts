@@ -8,7 +8,7 @@ describe('wines data', () => {
   })
 
   it('derives a non-empty slug for every wine', () => {
-    // An empty slug would emit dist/wines/.html — see the Greek-name case in slug.test.ts.
+    // An empty slug would emit dist/i//index.html — see the Greek-name case in slug.test.ts.
     for (const wine of wines) {
       expect(wineSlug(wine), `slug for ${wine.name}`).not.toBe('')
     }

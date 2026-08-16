@@ -1,9 +1,16 @@
 import type { Nutrition, Wine } from '../types.js'
 import { wineSlug } from '../utils/slug.js'
 
-// Canonical URLs keep the .html extension and the bare host: the Papaki package
-// serves static files straight from nginx, so there is no rewrite available to
-// make an extensionless path resolve, and www is only an alias of this host.
+// The canonical is the URL printed on the bottles, so it is pinned to the shape that
+// scans cleanest: bare host (www is only an alias), no extension, trailing slash.
+//
+// The trailing slash is load-bearing. Papaki serves static files straight from nginx with
+// no rewrite available, so /i/<slug>/ is a real directory; asking for it without the slash
+// earns nginx's directory 301, which hands back an http:// Location and bounces the scan
+// https -> http -> https. Printing the slash skips that entirely.
+//
+// Length matters too: at error correction H, which the centre logo needs, a QR holds 44
+// bytes before it grows from 37x37 to 41x41 modules. Every URL below fits with room spare.
 const ORIGIN = 'https://ktimakoutsogiorga.gr'
 
 function escapeHtml(s: string): string {
@@ -108,7 +115,7 @@ export function renderWinePage(wine: Wine): string {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#010101">
-<link rel="canonical" href="${ORIGIN}/wines/${wineSlug(wine)}.html">
+<link rel="canonical" href="${ORIGIN}/i/${wineSlug(wine)}/">
 <title>${escapeHtml(title)}</title>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-greek.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/piazzolla-latin.woff2" crossorigin>
